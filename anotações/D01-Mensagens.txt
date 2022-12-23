@@ -1,0 +1,13 @@
+Desafio Mensagens
+
+Foi utilizado:
+- Símbolos
+(referências: Unicode Tabela de caracteres. https://unicode-table.com/pt/html-entities/)
+
+- Tags
+* <h1> - Título Principal
+* <p> - Parágrafo
+* <br> - Quebra de linha
+
+
+Para mais consultas acesse o site oficial da W3Schools: https://www.w3schools.com/html/default.asp
