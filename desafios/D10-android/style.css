@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url(../D10-android/fontes/bebasneue.otf) format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Android';
+    src: url(../D10-android/fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+
+/* Tudo que tem nele se aplica ao documento inteiro até que seja modificado em outras declarações */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Tudo que tem nele se aplica ao documento inteiro */
+:root {
+    --cor01: #c5ebd6;
+    --cor02: #83e1ad;
+    --cor03: #3ddc84;
+    --cor04: #2fa866;
+    --cor05: #1a5c37;
+    --cor06: #063d1e;
+    --font-padrão: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque: 'Bebas Neue', cursive;
+    --font-android: 'Android', cursive;
+}
+
+body {
+    background-color: var(--cor01);
+    font-family: var(--font-padrão);
+}
+
+/* Cabeçalho do Site: Adiciona padrões de fontes, limite de tamanho do parágrafo, degradê linear com cores de variáveis, peso das fontes e sombra*/
+header {
+    background-image: linear-gradient(to bottom, var(--cor03), var(--cor05));
+    min-height: 150px;
+    padding-top: 40px;
+    text-align: center;
+    color: white;
+}
+
+header > h1 {
+    font-family: var(--font-destaque);
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px #0000003f;
+}
+
+header > p {
+    font-size: 1.2em;
+    max-width: 600px;
+    padding: 0px 10px;
+    margin: auto;
+    text-shadow: 2px 2px 0px #0000003f;
+}
+
+/* Menu do Site: Adiciona tipos de estilização com pseudo-classe, efeito transação e sombra de caixa*/
+nav {
+    background-color: var(--cor05);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
+}
+
+nav > a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition-duration: .3s;
+}
+
+nav > a:hover {
+    background-color: var(--cor03);
+    color: var(--cor05);
+    border-radius: 10px;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+    box-shadow: 0px -3px 10px #0000005c;
+    text-align: justify;
+
+    /* Adiciona bordas arredondadas a margem da tag */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    /* Estabelece limites para o desdobramento do conteúdo ao mexer na proporção da tela */
+    min-width: 300px;
+    max-width: 800px;
+}
+
+main h1 {
+    font-family: var(--font-android);
+    color: var(--cor05);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+main h2 {
+    background-image: linear-gradient(to right, var(--cor02), transparent);
+    font-family: var(--font-android);
+    color: var(--cor04);
+    font-size: 1.4em;
+    font-weight: normal;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+main p {
+    text-align: justify;
+    line-height: 1.5em;
+    text-indent: 2em;
+    padding: 10px 0px;
+}
+
+main a {
+    background-color: var(--cor02);
+    color: var(--cor06);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 2px 4px;
+    border-radius: 8px;
+}
+
+main a::after {
+    content: '\1F517';
+}
+
+main a:hover {
+    background-color: var(--cor01);
+}
+
+main a:active {
+    color: var(--cor04);
+}
+
+strong {
+    color: var(--cor05);
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+div.video  {
+    background-color: var(--cor06);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 57%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+background-color: var(--cor02);
+border-radius: 10px;
+padding: 10px;
+}
+
+aside h3 {
+    background-color: var(--cor05);
+    color: white;
+    font-size: 1.3em;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside ul {
+    list-style-position: inside;
+    list-style-type: '\2714\00A0';
+    columns: 2;
+}
+
+/* Rodapé do site: Adiciona padding no parágrafo, troca cor de fonte, e destaca links */
+footer {
+    background-color: var(--cor06);
+    color: #ffffff;
+}
+
+footer > p {
+    text-align: center;
+    padding: 10px;
+    font-size: .8em;
+}
+
+footer a {
+    color: var(--cor04);
+    text-decoration: none;
+}
+
+footer abbr {
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--cor02);
+}
+footer a:active {
+    color: var(--cor01);
+}
